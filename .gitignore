@@ -16,4 +16,6 @@
 !/log/.keep
 /tmp
 /db/seed-data
+/.vagrant
+
 
