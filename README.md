@@ -21,7 +21,7 @@ Kolejno:
 * `rails s`
 
 ## Używanie
-* localhost:3000 - aplikacja
+* localhost:3000 - aplikacja, logowanie - user/pass : admin@example.com/foobar
 * localhost:1080 - interfejs do testowania wysyłania maili przez aplikację
 * localhost:15432 - baza danych PostgreSQL, baza: pet_help_pl_development, user: vagrant, pass: vagrant
 
