@@ -1,0 +1,13 @@
+<% provide(:title, "Zapomniane hasło") %>
+<h1>Zapomniałem hasła</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:password_reset, url: password_resets_path) do |f| %>
+    <%= f.label :email, "E-mail" %>
+    <%= f.email_field :email, {class: 'form-control', required: 'required'} %>
+
+      <%= f.submit "Ustaw nowe hasło", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>

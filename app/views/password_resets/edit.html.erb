@@ -1,0 +1,21 @@
+<% provide(:title, 'Reset hasła') %>
+<h1>Ustaw nowe hasło</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user, url: password_reset_path(params[:id])) do |f| %>
+      <%= render 'shared/error_messages' %>
+
+      <%= hidden_field_tag :email, @user.email %>
+
+      <%= f.label :password, "Hasło" %>
+      <%= f.password_field :password, {class: 'form-control', required: 'required'} %>
+
+      <%= f.label :password_confirmation, "Powtórzenie hasła" %>
+      <%= f.password_field :password_confirmation, {class: 'form-control', required: 'required'} %>
+
+      <%= f.submit "Ustaw nowe hasło", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+</div>
+

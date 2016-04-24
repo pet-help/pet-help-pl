@@ -1,0 +1,25 @@
+<% provide(:title, "Logowanie") %>
+<h1>Logowanie</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(:session, url: login_path) do |f| %>
+
+      <%= f.label :email, "E-mail" %>
+      <%= f.email_field :email, {class: 'form-control', required: 'required'} %>
+
+      <%= f.label :password, "Hasło" %>
+      <%= link_to "(zapomniałem hasła)", new_password_reset_path %>
+      <%= f.password_field :password, {class: 'form-control', required: 'required'} %>
+
+      <%= f.label :remember_me, class: "checkbox inline" do %>
+        <%= f.check_box :remember_me %>
+        <span>Zapamiętaj mnie</span>
+      <% end %>
+
+      <%= f.submit "Zaloguj", class: "btn btn-primary" %>
+    <% end %>
+
+    <p>Nie masz konta? <%= link_to "Zarejestruj się!", signup_path %></p>
+  </div>
+</div>

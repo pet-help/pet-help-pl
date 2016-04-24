@@ -1,0 +1,8 @@
+<p>Witaj,</p>
+
+<p>
+kliknij poniższy link aby aktywować Twoje konto w serwisie pet_help_pl:
+</p>
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>
+                                                    

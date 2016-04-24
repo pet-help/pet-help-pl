@@ -1,0 +1,79 @@
+<% provide(:title, "Help") %>
+
+<form class="form-horizontal" role="form">
+	<div class="form-group">
+		<label class="col-sm-2 control-label" for="province">Województwo: </label>
+		<div class="col-sm-10">
+		<select class="form-control" name="province" id="province">
+			<option value="2">dolnośląskie</option>
+			<option value="4">kujawsko-pomorskie</option>
+			<option value="6">lubelskie</option>
+			<option value="8">lubuskie</option>
+			<option value="10">łódzkie</option>
+			<option value="12">małopolskie</option>
+			<option value="14">mazowieckie</option>
+			<option value="16">opolskie</option>
+			<option value="18">podkarpackie</option>
+			<option value="20">podlaskie</option>
+			<option value="22">pomorskie</option>
+			<option value="24" selected>śląskie</option>
+			<option value="26">świętokrzyskie</option>
+			<option value="28">warmińsko-mazurskie</option>
+			<option value="30">wielkopolskie</option>
+			<option value="32">zachodniopomorskie</option>
+		</select>
+		</div>
+	</div>
+
+	<div class="form-group has-feedback">
+		<label class="col-sm-2 control-label" for="place">Miejscowość: </label>
+		<div class="col-sm-10">
+			<input class="form-control" id="place">
+			<span id="place_success" class="glyphicon glyphicon-ok form-control-feedback"></span>
+			<input type="hidden" id="place_id" value="">
+		</div>
+	</div>
+
+	<div class="form-group has-feedback">
+		<label class="col-sm-2 control-label" for="street">Ulica: </label>
+		<div class="col-sm-10">
+			<input class="form-control" id="street">
+			<span id="street_success" class="glyphicon glyphicon-ok form-control-feedback"></span>
+			<input type="hidden" id="street_id" value="">
+		</div>
+	</div>
+
+	<div class="form-group has-feedback">
+		<label class="col-sm-2 control-label" for="address_number">Numer: </label>
+		<div class="col-sm-10">
+			<input class="form-control" id="address_number">
+		</div>
+	</div>
+
+	<div class="form-group has-feedback">
+		<label class="col-sm-2 control-label" for="institutions">Instytucja: </label>
+		<div class="col-sm-10">
+			<input class="form-control" id="institutions">
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label class="col-sm-2 control-label" for="institutions2">Instytucja: </label>
+		<div class="col-sm-10">
+		<select class="form-control" name="institutions2" id="institutions2">
+		</select>
+		</div>
+	</div>
+
+</form>
+
+
+
+ 
+<div class="ui-widget" style="margin-top:2em; font-family:Arial">
+	Result:
+	<div id="log" style="height: 200px; width: 300px; overflow: auto;" class="ui-widget-content"></div>
+</div>
+
+
+
